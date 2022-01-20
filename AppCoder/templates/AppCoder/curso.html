@@ -1,0 +1,16 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+
+{% block contenidoQueCambia %}
+    
+    <p>Contenido de Cursos</p>
+
+    <ul>
+        {% for curso in lista %}
+            <li>{{curso.nombre}} : {{curso.camada}}</li>    
+        {% endfor %}
+    </ul>
+
+{% endblock contenidoQueCambia %}
