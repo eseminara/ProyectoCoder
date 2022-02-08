@@ -4,8 +4,19 @@
 
 
 {% block contenidoQueCambia %}
-    
-    <h1>Contenido de Profesores</h1>
 
+    
+    <form action="/AppCoder/profesores/" method="POST"> {% csrf_token %}
+
+        <table>
+
+            {{formProfesor.as_table }}
+
+        </table>
+
+
+        <input type="submit" value="Crear">
+
+    </form>
 
 {% endblock contenidoQueCambia %}
